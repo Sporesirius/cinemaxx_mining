@@ -1,11 +1,11 @@
 import requests
 
-api_endpoint = "https://www.cinemaxx.de/compeso/getSeats"
+api_endpoint = "https://www.cinemaxx.de/compeso/getCinemas"
 
 headers = {
   "Content-Type": "application/x-www-form-urlencoded"
 }
-payload = {"seance_id": "7790B800023FVUVQLG"}
+payload = {"film_id": "26692", "setStart": "true"}
 
 response = requests.request("POST", api_endpoint, data=payload, headers=headers)
 
